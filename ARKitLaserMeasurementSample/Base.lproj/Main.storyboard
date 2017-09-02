@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSM-jy-i4k">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="xcD-HU-G28">
+            <objects>
+                <viewController id="VSM-jy-i4k" customClass="ViewController" customModule="LaserMeasurement" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NbP-Tm-6oO" customClass="ARSCNView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Landmark_White" translatesAutoresizingMaskIntoConstraints="NO" id="xHn-6A-pX9">
+                                <rect key="frame" x="101.5" y="246" width="172" height="174"/>
+                            </imageView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kU-X4-0rr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zb-dt-Q8c">
+                                        <rect key="frame" x="0.0" y="30.5" width="375" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="79k-8s-isS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0zb-dt-Q8c" firstAttribute="leading" secondItem="9kU-X4-0rr" secondAttribute="leading" id="6hL-ga-4TT"/>
+                                    <constraint firstAttribute="height" constant="100" id="BDy-VF-nAE"/>
+                                    <constraint firstItem="0zb-dt-Q8c" firstAttribute="centerY" secondItem="9kU-X4-0rr" secondAttribute="centerY" id="ZBU-3g-sSO"/>
+                                    <constraint firstAttribute="trailing" secondItem="0zb-dt-Q8c" secondAttribute="trailing" id="zBY-DB-dt0"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcJ-FO-9MA">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61i-6u-YGx">
+                                        <rect key="frame" x="91" y="35" width="193" height="30"/>
+                                        <state key="normal" title="Press to fire the Laser Beam"/>
+                                        <connections>
+                                            <action selector="TouchUpInsideButton:" destination="VSM-jy-i4k" eventType="touchUpInside" id="EgO-Vc-Qys"/>
+                                            <action selector="TouchUpOutsideButton:" destination="VSM-jy-i4k" eventType="touchUpOutside" id="3A3-2X-WAX"/>
+                                            <action selector="touchDownButton:" destination="VSM-jy-i4k" eventType="touchDown" id="4tu-tG-JtJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="61i-6u-YGx" firstAttribute="centerX" secondItem="RcJ-FO-9MA" secondAttribute="centerX" id="0sj-9s-GyU"/>
+                                    <constraint firstAttribute="height" constant="100" id="C1M-mh-fXr"/>
+                                    <constraint firstItem="61i-6u-YGx" firstAttribute="centerY" secondItem="RcJ-FO-9MA" secondAttribute="centerY" id="lAx-il-weh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9kU-X4-0rr" firstAttribute="top" secondItem="NbP-Tm-6oO" secondAttribute="top" id="8J9-fW-gel"/>
+                            <constraint firstItem="xHn-6A-pX9" firstAttribute="centerX" secondItem="NbP-Tm-6oO" secondAttribute="centerX" id="8Ut-jX-S0E"/>
+                            <constraint firstItem="9kU-X4-0rr" firstAttribute="leading" secondItem="tjV-FC-1b3" secondAttribute="leading" id="RYL-Bv-t1h"/>
+                            <constraint firstItem="xHn-6A-pX9" firstAttribute="centerY" secondItem="NbP-Tm-6oO" secondAttribute="centerY" id="Rze-8Q-FTq"/>
+                            <constraint firstItem="RcJ-FO-9MA" firstAttribute="leading" secondItem="tjV-FC-1b3" secondAttribute="leading" id="T0b-FK-jV3"/>
+                            <constraint firstItem="9kU-X4-0rr" firstAttribute="trailing" secondItem="tjV-FC-1b3" secondAttribute="trailing" id="dWn-bx-f17"/>
+                            <constraint firstItem="tjV-FC-1b3" firstAttribute="bottom" secondItem="RcJ-FO-9MA" secondAttribute="bottom" id="i6O-1E-WHN"/>
+                            <constraint firstItem="tjV-FC-1b3" firstAttribute="trailing" secondItem="RcJ-FO-9MA" secondAttribute="trailing" id="zQq-TA-gaJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tjV-FC-1b3"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="0zb-dt-Q8c" id="v3x-AZ-Qmh"/>
+                        <outlet property="sceneView" destination="NbP-Tm-6oO" id="av7-r1-Hra"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHX-KZ-oDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="333.60000000000002" y="47.226386806596707"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Landmark_White" width="172" height="174"/>
+    </resources>
+</document>
